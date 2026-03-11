@@ -1,11 +1,10 @@
-CREATE DATABASE userdb;
-USE userdb;
-
-CREATE TABLE users (
-    id INT NOT NULL AUTO_INCREMENT,
-    NAME VARCHAR(255) NOT NULL,
-    EMAIL VARCHAR(255) NOT NULL UNIQUE,
-    PRIMARY KEY (id)
+CREATE TABLE IF NOT EXISTS users (
+    id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(255) NOT NULL,
+    email VARCHAR(255) NOT NULL UNIQUE
 );
 
-SELECT * FROM USERS;
+INSERT INTO users (name, email) VALUES
+('Matheus', 'matheus@fiap.com'),
+('Pedro', 'pedro@fiap.com'),
+('Cleyton', 'cleyton@fiap.com');
